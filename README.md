@@ -28,6 +28,7 @@ A vitrine exibe:
 1. Landing Page Comercial
 2. Página de Links
 3. Landing Page em React + Tailwind + TypeScript
+4. Beauty Studio - Sistema de Agendamento Full Stack
 
 ## Tecnologias utilizadas
 
