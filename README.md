@@ -4,12 +4,38 @@ Portfólio profissional focado em desenvolvimento front-end, com apresentação 
 
 ## Sobre este repositório
 
-Este projeto foi criado para funcionar como vitrine profissional no GitHub, com foco em:
+Este projeto funciona como vitrine profissional, com foco em:
 
 - apresentação clara da minha atuação
 - projetos reais com links públicos
 - design responsivo
 - base SEO para indexação
+
+## Projetos em destaque
+
+1. **Landing Page Comercial**  
+	Stack: HTML, CSS e JavaScript  
+	Link: https://vitoriasilvabeauty.vercel.app/
+
+2. **Página de Links**  
+	Stack: HTML e CSS  
+	Link: https://melbeauty.com.br/paglinks/
+
+3. **Landing Page em React + Tailwind + TypeScript**  
+	Stack: React, Tailwind CSS e TypeScript  
+	Link: https://melbeauty.com.br/
+
+4. **Beauty Studio - Sistema de Agendamento (em produção)**  
+	Stack: React, TypeScript, Tailwind, Node.js, Express, PostgreSQL, Prisma e JWT  
+	Link: https://agendamento.melbeauty.com.br/
+
+5. **Catálogo Digital de Produtos**  
+	Stack: Vite, React e CSS  
+	Link: https://catalogo-two-psi.vercel.app/
+
+6. **Catálogo Digital de Serviços**  
+	Stack: Vite, React e CSS  
+	Link: https://servicos-sepia.vercel.app/
 
 ## Confidencialidade
 
@@ -23,14 +49,7 @@ A vitrine exibe:
 - imagens/screenshot
 - link público de demonstração
 
-## Projetos em destaque
-
-1. Landing Page Comercial
-2. Página de Links
-3. Landing Page em React + Tailwind + TypeScript
-4. Beauty Studio - Sistema de Agendamento Full Stack
-
-## Tecnologias utilizadas
+## Tecnologias utilizadas neste portfólio
 
 - HTML5
 - CSS3

@@ -63,12 +63,23 @@
 
     <header class="hero">
       <p class="hero-kicker">Portfólio Front-end</p>
-      <h1>Construo experiências web com foco em resultado real.</h1>
+      <h1>Crio landing pages e interfaces web com foco em conversão.</h1>
       <p class="hero-text">
-        Projetos de clientes são apresentados com imagens, contexto e links públicos.
-        O código-fonte permanece privado por confidencialidade contratual.
+        Sou Eberson Silva, desenvolvedor front-end em formação, focado em
+        transformar objetivos de negócio em experiências digitais claras,
+        responsivas e de alta performance.
       </p>
-      <a class="cta" href="#projetos">Ver Projetos</a>
+      <div class="hero-actions">
+        <a class="cta" href="#projetos">Ver Projetos</a>
+        <a
+          class="cta cta-secondary"
+          href="https://wa.me/5511948551437"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Conversar no WhatsApp"
+          >Falar no WhatsApp</a
+        >
+      </div>
     </header>
 
     <main>
@@ -76,13 +87,13 @@
         <div class="section-head">
           <h2>Sobre mim</h2>
           <p>
-            Sou desenvolvedor front-end em formação, cursando Análise e Desenvolvimento de Sistemas e focado na criação de interfaces modernas e funcionais.
+            Estou em formação em Análise e Desenvolvimento de Sistemas e aplico esse aprendizado em projetos reais para negócios locais e marcas pessoais.
           </p>
           <p>
-            Tenho experiência no desenvolvimento de projetos com React, TypeScript e Tailwind CSS, incluindo landing pages e páginas voltadas para conversão de clientes.
+            Atuo principalmente no desenvolvimento de landing pages e páginas institucionais, com implementação front-end, ajustes de SEO técnico e publicação em produção.
           </p>
           <p>
-            Busco constantemente evoluir minhas habilidades e desenvolver soluções que resolvam problemas reais, sempre com foco em desempenho, usabilidade e boas práticas de desenvolvimento.
+            Meu objetivo é evoluir de forma consistente, entregando interfaces que sejam simples de usar, fáceis de manter e alinhadas ao objetivo comercial de cada projeto.
           </p>
         </div>
 
@@ -202,6 +213,48 @@
               <a href="https://agendamento.melbeauty.com.br/" target="_blank" rel="noopener noreferrer">Acessar Projeto</a>
             </div>
           </article>
+
+          <article class="card reveal">
+            <img
+              src="assets/images/produtos.png"
+              alt="Screenshot de catálogo digital de produtos com carrinho"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <h3>Catálogo Digital de Produtos</h3>
+              <p>
+                Catálogo com carrinho para seleção de itens. No checkout, o sistema
+                monta um resumo com produtos, quantidades e total, enviando tudo
+                automaticamente para o WhatsApp cadastrado.
+              </p>
+              <ul>
+                <li>Vite, React e CSS</li>
+                <li>Carrinho, resumo de pedido e envio para WhatsApp</li>
+              </ul>
+              <a href="https://catalogo-two-psi.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Link do projeto de catálogo de produtos em breve">Link em breve</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <img
+              src="assets/images/servicos.png"
+              alt="Screenshot de catálogo digital de serviços com agendamento"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <h3>Catálogo Digital de Serviços</h3>
+              <p>
+                Catálogo sem carrinho, focado em agendamento direto: o usuário
+                escolhe o serviço, informa data e horário, e envia o resumo da
+                solicitação para o WhatsApp cadastrado.
+              </p>
+              <ul>
+                <li>Vite, React e CSS</li>
+                <li>Fluxo de agendamento com data, hora e resumo no WhatsApp</li>
+              </ul>
+              <a href="https://servicos-sepia.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Link do projeto de catálogo de serviços em breve">Link em breve</a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -217,9 +270,20 @@
     <footer class="footer">
       <div class="footer-meta">
         <p>© <span id="year"></span> Eberson Silva</p>
+        <p>Desenvolvedor Front-end</p>
       </div>
 
-      <nav class="social-links" aria-label="Redes sociais">
+      <div class="footer-contact">
+        <p class="footer-title">Minhas redes sociais</p>
+        <nav class="footer-text-links" aria-label="Redes sociais em texto">
+          <a href="https://github.com/EbersonSilva" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/ebersonsilva" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/binho_ebs/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/5511948551437" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+      </div>
+
+      <nav class="social-links" aria-label="Ícones das redes sociais">
         <a href="https://github.com/EbersonSilva" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.72.5.1.66-.22.66-.49v-1.89c-2.78.62-3.37-1.2-3.37-1.2-.45-1.2-1.12-1.52-1.12-1.52-.91-.64.07-.63.07-.63 1 .07 1.54 1.05 1.54 1.05.9 1.57 2.35 1.12 2.93.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.74 0 0 .84-.27 2.75 1.06a9.28 9.28 0 0 1 5 0c1.91-1.33 2.75-1.06 2.75-1.06.55 1.43.2 2.48.1 2.74.64.72 1.03 1.64 1.03 2.76 0 3.95-2.34 4.82-4.57 5.07.36.32.68.95.68 1.92v2.85c0 .27.16.59.67.49A10.25 10.25 0 0 0 22 12.25C22 6.59 17.52 2 12 2z"/>
