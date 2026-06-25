@@ -29,9 +29,9 @@ const updateProgress = () => {
 
   const scrollTop = window.scrollY;
   const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = scrollableHeight > 0 ? (scrollTop / scrollableHeight) * 100 : 0;
+  const progress = scrollableHeight > 0 ? scrollTop / scrollableHeight : 0;
 
-  progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  progressBar.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
 };
 
 window.addEventListener("scroll", updateProgress, { passive: true });

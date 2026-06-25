@@ -66,11 +66,14 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 4px;
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   z-index: 60;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 8px 20px rgba(56, 189, 248, 0.22);
+  transform: scaleX(0);
+  transform-origin: left;
+  will-change: transform;
 }
 
 .bg-shape {
@@ -286,6 +289,20 @@ p {
   color: #7dd3fc;
   font-weight: 700;
   text-decoration-color: rgba(125, 211, 252, 0.45);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.card:hover .card-content a:not(.link-disabled) {
+  color: #93c5fd;
+  transform: translateX(4px);
+}
+
+.card-content a.link-disabled {
+  color: var(--muted);
+  text-decoration: none;
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .note {
