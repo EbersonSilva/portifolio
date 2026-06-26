@@ -19,7 +19,7 @@ Este projeto funciona como vitrine profissional, com foco em:
 
 2. **Página de Links**  
 	Stack: HTML e CSS  
-	Link: https://melbeauty.com.br/paglinks/
+	Link: https://links.melbeauty.com.br
 
 3. **Landing Page em React + Tailwind + TypeScript**  
 	Stack: React, Tailwind CSS e TypeScript  
@@ -78,6 +78,29 @@ A vitrine exibe:
 1. Clone este repositório.
 2. Abra a pasta do projeto.
 3. Execute o arquivo `index.html` no navegador.
+
+## Rastreamento de Eventos (Google Analytics)
+
+Os botões e links de conversão do portfólio estão integrados ao Google Analytics para monitorar métricas de engajamento de forma totalmente anônima. Os eventos são disparados automaticamente via tags `data-ga-*` personalizadas nos elementos HTML.
+
+### Eventos Rastreados:
+- `click_cta_projects`: Cliques no botão "Ver Projetos".
+- `click_cta_whatsapp_hero`: Cliques no botão de WhatsApp do cabeçalho.
+- `click_project_link`: Cliques nos links de "Acessar Projeto" (inclui o parâmetro `project_title`).
+- `click_social_footer`: Cliques nos links de texto de redes sociais do rodapé (inclui o parâmetro `platform`).
+- `click_social_icon`: Cliques nos ícones de redes sociais do rodapé (inclui o parâmetro `platform`).
+- `click_whatsapp_float`: Cliques no botão flutuante do WhatsApp.
+
+---
+
+## Política de Consentimento de Cookies (LGPD)
+
+O site está em total conformidade com a LGPD (Lei Geral de Proteção de Dados):
+- **Consent Mode Padrão (`denied`)**: Por padrão, antes de qualquer interação no banner de cookies, os cookies de rastreamento do Google Analytics permanecem desativados.
+- **Banner de Consentimento**: Um banner amigável e responsivo permite que o usuário tome uma decisão ativa de consentimento ("Aceitar" ou "Recusar").
+- **Persistência**: A escolha do usuário é armazenada localmente (`localStorage`). Caso o usuário aceite, o Consent Mode é atualizado para `granted` e o rastreamento começa. Se recusar, as tags do GA permanecem desativadas e não gravam cookies.
+
+---
 
 ## Contato
 

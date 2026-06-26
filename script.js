@@ -36,3 +36,69 @@ const updateProgress = () => {
 
 window.addEventListener("scroll", updateProgress, { passive: true });
 updateProgress();
+
+// Rastreamento automático de cliques do Google Analytics via Event Delegation
+document.addEventListener("click", (event) => {
+  const target = event.target.closest("[data-ga-event]");
+  if (!target) return;
+
+  const eventName = target.getAttribute("data-ga-event");
+  const eventParams = {};
+
+  // Coleta parâmetros dinâmicos (data-ga-*)
+  for (const attr of target.attributes) {
+    if (attr.name.startsWith("data-ga-") && attr.name !== "data-ga-event") {
+      const paramName = attr.name.slice(8).replace(/-/g, "_");
+      eventParams[paramName] = attr.value;
+    }
+  }
+
+  if (typeof gtag === "function") {
+    gtag("event", eventName, eventParams);
+  }
+});
+
+// Controle do Banner de Consentimento de Cookies (LGPD)
+const cookieBanner = document.getElementById("cookie-consent");
+const cookieAcceptBtn = document.getElementById("cookie-accept");
+const cookieDeclineBtn = document.getElementById("cookie-decline");
+
+if (cookieBanner && cookieAcceptBtn && cookieDeclineBtn) {
+  const consent = localStorage.getItem("cookie-consent");
+
+  // Exibe o banner se o usuário ainda não tiver tomado uma decisão
+  if (!consent) {
+    setTimeout(() => {
+      cookieBanner.classList.remove("cookie-banner-hidden");
+    }, 1000);
+  }
+
+  cookieAcceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookie-consent", "accepted");
+    cookieBanner.classList.add("cookie-banner-hidden");
+
+    if (typeof gtag === "function") {
+      gtag("consent", "update", {
+        "ad_storage": "granted",
+        "analytics_storage": "granted"
+      });
+      gtag("event", "cookie_consent_accepted", {
+        event_category: "privacy",
+        event_label: "Cookie Consent Accepted"
+      });
+    }
+  });
+
+  cookieDeclineBtn.addEventListener("click", () => {
+    localStorage.setItem("cookie-consent", "rejected");
+    cookieBanner.classList.add("cookie-banner-hidden");
+
+    if (typeof gtag === "function") {
+      gtag("consent", "update", {
+        "ad_storage": "denied",
+        "analytics_storage": "denied"
+      });
+    }
+  });
+}
+
