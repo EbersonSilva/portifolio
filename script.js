@@ -116,3 +116,29 @@ faqItems.forEach((currentItem) => {
   });
 });
 
+// Controle do menu mobile (Hamburger)
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+const bodyEl = document.body;
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !isExpanded);
+    navToggle.classList.toggle("active");
+    navLinks.classList.toggle("active");
+    bodyEl.classList.toggle("overflow-hidden");
+  });
+
+  // Fecha o menu ao clicar em qualquer link (rolagem suave)
+  const links = navLinks.querySelectorAll("a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.classList.remove("active");
+      navLinks.classList.remove("active");
+      bodyEl.classList.remove("overflow-hidden");
+    });
+  });
+}
+
