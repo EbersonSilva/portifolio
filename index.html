@@ -9,7 +9,7 @@
     // Configura o Consent Mode inicial baseado no localStorage ou nega por padrão
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    
+
     if (localStorage.getItem('cookie-consent') === 'accepted') {
       gtag('consent', 'default', {
         'ad_storage': 'granted',
@@ -86,6 +86,20 @@
   <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo" data-ga-event="click_nav_logo">Eberson Silva</a>
+      <nav class="nav-links">
+        <a href="#sobre" data-ga-event="click_nav_about">Sobre</a>
+        <a href="#projetos" data-ga-event="click_nav_projects">Projetos</a>
+        <a href="#faq" data-ga-event="click_nav_faq">Dúvidas</a>
+        <a href="#contato" data-ga-event="click_nav_contact">Contato</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/5511948551437" target="_blank" rel="noopener noreferrer"
+        aria-label="Conversar no WhatsApp" data-ga-event="click_nav_whatsapp">Falar no WhatsApp</a>
+    </div>
+  </header>
+
   <header class="hero">
     <p class="hero-kicker">Criação de Sites e Páginas</p>
     <h1>Crio sites e páginas que ajudam seu negócio a vender mais.</h1>
@@ -103,20 +117,27 @@
 
   <main>
     <section id="sobre" class="section reveal">
-      <div class="section-head">
-        <h2>Sobre mim</h2>
-        <p>
-          Estou em formação em Análise e Desenvolvimento de Sistemas e aplico esse aprendizado em projetos reais para
-          negócios locais e marcas pessoais.
-        </p>
-        <p>
-          Atuo principalmente na criação de sites, landing pages e páginas institucionais, com implementação front-end,
-          ajustes de SEO técnico e publicação em produção.
-        </p>
-        <p>
-          Meu objetivo é evoluir de forma consistente, entregando interfaces que sejam simples de usar, fáceis de manter
-          e alinhadas ao objetivo comercial de cada projeto.
-        </p>
+      <div class="about-hero">
+        <div class="about-photo">
+          <img src="assets/images/eu.webp" alt="Eberson Silva" loading="lazy" />
+        </div>
+        <div class="about-text">
+          <h2>Sobre mim</h2>
+          <p>
+            Estou em formação em Análise e Desenvolvimento de Sistemas e aplico esse aprendizado em projetos reais para
+            negócios locais e marcas pessoais.
+          </p>
+          <p>
+            Atuo principalmente na criação de sites, landing pages e páginas institucionais, com implementação
+            front-end,
+            ajustes de SEO técnico e publicação em produção.
+          </p>
+          <p>
+            Meu objetivo é evoluir de forma consistente, entregando interfaces que sejam simples de usar, fáceis de
+            manter
+            e alinhadas ao objetivo comercial de cada projeto.
+          </p>
+        </div>
       </div>
 
       <div class="about-grid">
@@ -157,17 +178,19 @@
 
       <div class="grid">
         <article class="card reveal">
-          <img src="assets/images/vitoriasilvabeauty.png" alt="Screenshot de landing page" loading="lazy" />
+          <img src="assets/images/vitoria.webp" alt="Screenshot de landing page" loading="lazy" />
           <div class="card-content">
             <h3>Landing Page Comercial</h3>
             <p>
               Página com foco em conversão para campanha local. Otimizada para
               mobile e velocidade.
             </p>
-            <ul>
-              <li>HTML, CSS, JavaScript</li>
-              <li>SEO técnico básico</li>
-            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">SEO Técnico</span>
+            </div>
             <a href="https://vitoriasilvabeauty.vercel.app/" target="_blank" rel="noopener noreferrer"
               data-ga-event="click_project_link" data-ga-project-title="Landing Page Comercial">Acessar
               Projeto</a>
@@ -175,24 +198,25 @@
         </article>
 
         <article class="card reveal">
-          <img src="assets/images/paglinks.png" alt="Screenshot de página de links" loading="lazy" />
+          <img src="assets/images/paglinks (2).webp" alt="Screenshot de página de links" loading="lazy" />
           <div class="card-content">
             <h3>Página de Links</h3>
             <p>
               Página de links para marca pessoal com design responsivo e identidade
               visual personalizada.
             </p>
-            <ul>
-              <li>HTML, CSS</li>
-              <li>Deploy contínuo</li>
-            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">Deploy Contínuo</span>
+            </div>
             <a href="https://links.melbeauty.com.br" target="_blank" rel="noopener noreferrer"
               data-ga-event="click_project_link" data-ga-project-title="Página de Links">Acessar Projeto</a>
           </div>
         </article>
 
         <article class="card reveal">
-          <img src="assets/images/melbeauty.png" alt="Screenshot de landing page em React, Tailwind e TypeScript"
+          <img src="assets/images/melissa.webp" alt="Screenshot de landing page em React, Tailwind e TypeScript"
             loading="lazy" />
           <div class="card-content">
             <h3>Landing Page em React + Tailwind + TypeScript</h3>
@@ -200,17 +224,19 @@
               Landing page moderna com foco em conversão, experiência mobile e
               arquitetura de componentes para manutenção simples.
             </p>
-            <ul>
-              <li>React, Tailwind CSS e TypeScript</li>
-              <li>Componentização e responsividade</li>
-            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Tailwind CSS</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Componentização</span>
+            </div>
             <a href="https://melbeauty.com.br/" target="_blank" rel="noopener noreferrer"
               data-ga-event="click_project_link" data-ga-project-title="Landing Page React">Acessar Projeto</a>
           </div>
         </article>
 
         <article class="card reveal">
-          <img src="assets/images/agendamento.png" alt="Screenshot de sistema de agendamento Beauty Studio"
+          <img src="assets/images/agendamento.webp" alt="Screenshot de sistema de agendamento Beauty Studio"
             loading="lazy" />
           <div class="card-content">
             <h3>Beauty Studio - Sistema de Agendamento</h3>
@@ -218,10 +244,16 @@
               Sistema Full Stack para gestão de agendamentos em estúdios de beleza.
               Agendamento em 3 passos com aprovação administrativo e trava de conflito.
             </p>
-            <ul>
-              <li>React, TypeScript, Tailwind, Node.js, Express</li>
-              <li>PostgreSQL, Prisma, JWT, Responsivo</li>
-            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Tailwind</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Prisma</span>
+              <span class="tech-badge">JWT</span>
+            </div>
             <a href="https://agendamento.melbeauty.com.br/" target="_blank" rel="noopener noreferrer"
               data-ga-event="click_project_link" data-ga-project-title="Beauty Studio">Acessar
               Projeto</a>
@@ -229,7 +261,7 @@
         </article>
 
         <article class="card reveal">
-          <img src="assets/images/agendafacil.png" alt="Screenshot do AgendaFacil com confirmação por WhatsApp"
+          <img src="assets/images/agendafacil.webp" alt="Screenshot do AgendaFacil com confirmação por WhatsApp"
             loading="lazy" />
           <div class="card-content">
             <h3>AgendaFacil - Agendamento com Confirmação no WhatsApp</h3>
@@ -237,10 +269,12 @@
               Sistema de agendamento com fluxo rápido para cliente e confirmação
               automática também via WhatsApp para reforçar presença e reduzir faltas.
             </p>
-            <ul>
-              <li>HTML, CSS e JavaScript</li>
-              <li>Confirmação de agendamento com envio para WhatsApp</li>
-            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Integração WhatsApp</span>
+            </div>
             <a href="https://agendafacil-phi-pearl.vercel.app/" target="_blank" rel="noopener noreferrer"
               data-ga-event="click_project_link" data-ga-project-title="AgendaFacil">Acessar
               Projeto</a>
@@ -248,7 +282,7 @@
         </article>
 
         <article class="card reveal">
-          <img src="assets/images/produtos.png" alt="Screenshot de catálogo digital de produtos com carrinho"
+          <img src="assets/images/produtos.webp" alt="Screenshot de catálogo digital de produtos com carrinho"
             loading="lazy" />
           <div class="card-content">
             <h3>Catálogo Digital de Produtos</h3>
@@ -257,17 +291,20 @@
               monta um resumo com produtos, quantidades e total, enviando tudo
               automaticamente para o WhatsApp cadastrado.
             </p>
-            <ul>
-              <li>Vite, React e CSS</li>
-              <li>Carrinho, resumo de pedido e envio para WhatsApp</li>
-            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">Vite</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">Carrinho</span>
+              <span class="tech-badge">WhatsApp API</span>
+            </div>
             <a class="link-disabled" href="https://catalogo-two-psi.vercel.app/" target="_blank"
               rel="noopener noreferrer" aria-label="Link do projeto de catálogo de produtos em breve">Link em breve</a>
           </div>
         </article>
 
         <article class="card reveal">
-          <img src="assets/images/servicos.png" alt="Screenshot de catálogo digital de serviços com agendamento"
+          <img src="assets/images/servicos.webp" alt="Screenshot de catálogo digital de serviços com agendamento"
             loading="lazy" />
           <div class="card-content">
             <h3>Catálogo Digital de Serviços</h3>
@@ -276,14 +313,97 @@
               escolhe o serviço, informa data e horário, e envia o resumo da
               solicitação para o WhatsApp cadastrado.
             </p>
-            <ul>
-              <li>Vite, React e CSS</li>
-              <li>Fluxo de agendamento com data, hora e resumo no WhatsApp</li>
-            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">Vite</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">Agendamento</span>
+              <span class="tech-badge">WhatsApp API</span>
+            </div>
             <a class="link-disabled" href="https://servicos-sepia.vercel.app/" target="_blank" rel="noopener noreferrer"
               aria-label="Link do projeto de catálogo de serviços em breve">Link em breve</a>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section reveal">
+      <div class="section-head">
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <p>
+          Tire suas dúvidas rápidas sobre como funciona o meu processo de trabalho e o desenvolvimento de projetos.
+        </p>
+      </div>
+      <div class="faq-accordion">
+        <details class="faq-item" open>
+          <summary class="faq-question">Qual o prazo médio de entrega de uma Landing Page?</summary>
+          <div class="faq-answer">
+            <p>
+              O prazo médio para entrega de uma landing page otimizada com foco em conversão varia de 5 a 10 dias úteis,
+              a partir do envio de todo o material necessário (textos, imagens e acessos).
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Como funciona o processo de hospedagem e domínio?</summary>
+          <div class="faq-answer">
+            <p>
+              Eu ajudo você a registrar seu domínio e contratar a hospedagem se necessário. Para landing pages e sites
+              estáticos, utilizo deploys em servidores modernos e globais (como Vercel e Netlify) que oferecem planos de
+              hospedagem gratuitos extremamente rápidos, eliminando custos de manutenção do servidor.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Os sites funcionam bem em celulares?</summary>
+          <div class="faq-answer">
+            <p>
+              Com certeza! Mais de 80% do tráfego atual de internet vem de dispositivos móveis. Todo site ou landing
+              page que crio é desenvolvido com a filosofia Mobile-First ou com responsividade rigorosa, garantindo uma
+              experiência fantástica no celular, tablet e desktop.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">O que está incluído no SEO Técnico básico?</summary>
+          <div class="faq-answer">
+            <p>
+              Inclui estruturação semântica do código, otimização de velocidade de carregamento de recursos,
+              configuração das tags descritivas do site, sitemap.xml, robots.txt, tags de compartilhamento social (Open
+              Graph) e dados estruturados JSON-LD do Google.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="contato" class="section reveal">
+      <div class="section-head">
+        <h2>Vamos trabalhar juntos?</h2>
+        <p>
+          Entre em contato diretamente para tirar suas dúvidas ou solicitar um orçamento sem compromisso.
+        </p>
+      </div>
+      <div class="contact-methods-container">
+        <div class="contact-method">
+          <span class="method-icon" aria-hidden="true">💬</span>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/5511948551437" target="_blank" rel="noopener noreferrer"
+              data-ga-event="click_contact_whatsapp_details">(11) 94855-1437</a>
+          </div>
+        </div>
+        <div class="contact-method">
+          <span class="method-icon" aria-hidden="true">✉️</span>
+          <div>
+            <strong>E-mail</strong>
+            <a href="mailto:ebersonsilva.dev@gmail.com"
+              data-ga-event="click_contact_email_details">ebersonsilva.dev@gmail.com</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -325,8 +445,8 @@
         </svg>
       </a>
 
-      <a href="https://www.linkedin.com/in/ebersonsilva" target="_blank" rel="noopener noreferrer"
-        aria-label="LinkedIn" data-ga-event="click_social_icon" data-ga-platform="LinkedIn">
+      <a href="https://www.linkedin.com/in/ebersonsilva" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+        data-ga-event="click_social_icon" data-ga-platform="LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path
             d="M6.94 8.5a1.64 1.64 0 1 1 0-3.28 1.64 1.64 0 0 1 0 3.28zM5.5 9.9h2.88V19H5.5V9.9zm4.78 0h2.76v1.24h.04c.38-.73 1.32-1.5 2.72-1.5 2.91 0 3.45 1.95 3.45 4.49V19h-2.87v-4.3c0-1.03-.02-2.35-1.4-2.35-1.4 0-1.62 1.11-1.62 2.28V19h-2.88V9.9z" />
@@ -365,7 +485,8 @@
       <div class="cookie-banner-text">
         <p class="cookie-banner-title">Nós respeitamos sua privacidade</p>
         <p class="cookie-banner-description">
-          Utilizamos cookies para analisar o tráfego do site e melhorar sua experiência. Ao clicar em "Aceitar", você consente com o uso de cookies de análise.
+          Utilizamos cookies para analisar o tráfego do site e melhorar sua experiência. Ao clicar em "Aceitar", você
+          consente com o uso de cookies de análise.
         </p>
       </div>
     </div>

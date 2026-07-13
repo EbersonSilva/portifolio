@@ -101,4 +101,18 @@ if (cookieBanner && cookieAcceptBtn && cookieDeclineBtn) {
     }
   });
 }
+// Accordion do FAQ - Garante que apenas uma pergunta fique aberta por vez
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((currentItem) => {
+  currentItem.addEventListener("toggle", () => {
+    if (currentItem.open) {
+      faqItems.forEach((item) => {
+        if (item !== currentItem && item.open) {
+          item.removeAttribute("open");
+        }
+      });
+    }
+  });
+});
 
